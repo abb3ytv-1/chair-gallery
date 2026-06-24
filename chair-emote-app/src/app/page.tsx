@@ -1,4 +1,6 @@
-import Image from "next/image";
+"use client";
+
+import { ThemeToggle } from "../components/ThemeToggle";
 
 export default function Home() {
   const decreeOfTheDay = {
@@ -16,7 +18,11 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen p-10 bg-neutral-50">
+    <main className="min-h-screen p-10 bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors">
+
+      {/* Theme Toggle (global control) */}
+      <ThemeToggle />
+
       <div className="mx-auto max-w-4xl">
 
         {/* Council Header */}
@@ -24,13 +30,13 @@ export default function Home() {
           <h1 className="text-5xl font-bold tracking-wide">
             🏛️ The Chair Council
           </h1>
-          <p className="text-gray-600 mt-2 italic">
+          <p className="text-gray-600 dark:text-gray-400 mt-2 italic">
             Proceedings, decrees, and sanctioned chair activity.
           </p>
         </header>
 
         {/* Decree of the Day */}
-        <section className="mb-10 border rounded-xl p-8 bg-white shadow-sm">
+        <section className="mb-10 border rounded-xl p-8 bg-white dark:bg-neutral-900 shadow-sm dark:border-neutral-800">
           <h2 className="text-2xl font-semibold mb-6">
             📜 Decree of the Day
           </h2>
@@ -44,18 +50,18 @@ export default function Home() {
               {decreeOfTheDay.title}
             </h3>
 
-            <p className="mt-4 text-gray-700">
+            <p className="mt-4 text-gray-700 dark:text-gray-300">
               {decreeOfTheDay.decree}
             </p>
 
-            <button className="mt-6 px-5 py-2 border rounded-lg hover:bg-gray-100">
+            <button className="mt-6 px-5 py-2 border rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-800 transition">
               Enter Chamber
             </button>
           </div>
         </section>
 
         {/* Council Log */}
-        <section className="border rounded-xl p-8 bg-white shadow-sm">
+        <section className="border rounded-xl p-8 bg-white dark:bg-neutral-900 shadow-sm dark:border-neutral-800">
           <h2 className="text-2xl font-semibold mb-6">
             📂 Council Log
           </h2>
@@ -64,7 +70,7 @@ export default function Home() {
             {recentMotions.map((motion, i) => (
               <div
                 key={i}
-                className="p-4 border rounded-lg hover:bg-gray-50"
+                className="p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition"
               >
                 🪑 {motion}
               </div>
@@ -72,8 +78,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer Directive */}
-        <footer className="mt-10 text-center text-sm text-gray-500">
+        {/* Footer */}
+        <footer className="mt-10 text-center text-sm text-gray-500 dark:text-gray-400">
           All chair activity is monitored under Council Regulation 7.🪑
         </footer>
 
