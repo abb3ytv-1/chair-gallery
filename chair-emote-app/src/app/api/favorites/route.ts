@@ -6,7 +6,7 @@ const COOKIE_NAME = "council-user-id";
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 365 * 2; // 2 years
 
 async function getUserId() {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const existingId = cookieStore.get(COOKIE_NAME)?.value;
 
   if (existingId) {
@@ -26,7 +26,7 @@ async function getFavoriteIds(userId: string) {
     select: { chairId: true },
   });
 
-  return favorites.map((row) => row.chairId);
+  return favorites.map((row: { chairId: string }) => row.chairId);
 }
 
 export async function GET() {

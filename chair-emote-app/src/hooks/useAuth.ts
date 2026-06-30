@@ -88,6 +88,75 @@ export function useAuth() {
     }
   }, []);
 
+  const changePassword = useCallback(
+    async (currentPassword: string, newPassword: string) => {
+      setError(null);
+      try {
+        const response = await fetch("/api/auth/change-password", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ currentPassword, newPassword }),
+        });
+
+        const data = await response.json();
+        if (!response.ok) {
+          setError(data.error ?? "Unable to change password");
+          return false;
+        }
+
+        return true;
+      } catch {
+        setError("Network error while changing password");
+        return false;
+      }
+    },
+    [],
+  );
+
+  const changeEmail = useCallback(async (newEmail: string) => {
+    setError(null);
+    try {
+      const response = await fetch("/api/auth/profile", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: newEmail }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        setError(data.error ?? "Unable to change email");
+        return false;
+      }
+
+      setUser(data as AuthUser);
+      return true;
+    } catch {
+      setError("Network error while changing email");
+      return false;
+    }
+  }, []);
+
+  const deleteAccount = useCallback(async () => {
+    setError(null);
+    try {
+      const response = await fetch("/api/auth/profile", {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        setError(data.error ?? "Unable to delete account");
+        return false;
+      }
+
+      setUser(null);
+      return true;
+    } catch {
+      setError("Network error while deleting account");
+      return false;
+    }
+  }, []);
+
   return {
     user,
     loading,
@@ -95,6 +164,9 @@ export function useAuth() {
     login,
     register,
     logout,
+    changePassword,
+    changeEmail,
+    deleteAccount,
     fetchUser,
     setError,
   };

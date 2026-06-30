@@ -7,7 +7,7 @@ export const GUEST_COOKIE_NAME = "council-user-id";
 export const COOKIE_MAX_AGE = 60 * 60 * 24 * 365 * 2; // 2 years
 
 export async function getSessionUser() {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const token = cookieStore.get(SESSION_COOKIE_NAME)?.value;
   if (!token) return null;
 
@@ -24,7 +24,7 @@ export async function getSessionUser() {
 }
 
 export async function getGuestUser() {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const guestId = cookieStore.get(GUEST_COOKIE_NAME)?.value;
   if (guestId) {
     const user = await prisma.user.findUnique({ where: { id: guestId } });

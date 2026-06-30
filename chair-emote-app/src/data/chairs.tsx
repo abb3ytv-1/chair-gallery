@@ -19,7 +19,6 @@ export const chairs: Chair[] = [
     owner: "Tiny Bench",
     decree: "Authorized for minor airborne events.",
     detail: "Filed under incident review after a very dramatic room crossing.",
-    image: "../../assets/kiddy-chair.png",
   },
   {
     id: "dad-chair",
@@ -29,7 +28,6 @@ export const chairs: Chair[] = [
     owner: "Dad",
     decree: "Reserved for executive resting.",
     detail: "Comes with remote custody and a suspiciously immediate nap aura.",
-    image: "../../assets/dad-chair.png",
   },
   {
     id: "cow-chair",
@@ -39,7 +37,6 @@ export const chairs: Chair[] = [
     owner: "Pasture Desk",
     decree: "Recognized for gentle authority.",
     detail: "Soft-spoken, highly official, and impossible to rush.",
-    image: "../../assets/cow-chair.png",
   },
   {
     id: "ryan-chair",
@@ -49,7 +46,6 @@ export const chairs: Chair[] = [
     owner: "Ryan",
     decree: "A throne, obviously.",
     detail: "The council does not argue with upholstery at this altitude.",
-    image: "../../assets/ryan-chair.png",
   },
   {
     id: "rainbow-chair",
@@ -59,7 +55,6 @@ export const chairs: Chair[] = [
     owner: "Morale",
     decree: "Assigned optimism support.",
     detail: "Bright enough to improve the room before the meeting starts.",
-    image: "../../assets/rainbow-chair.png",
   },
   {
     id: "tiempo-chair",

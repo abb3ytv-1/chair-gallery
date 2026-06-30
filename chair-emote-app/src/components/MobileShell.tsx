@@ -8,7 +8,7 @@ const tabs = [
   { label: "Home", href: "/", icon: "⌂" },
   { label: "Chairs", href: "/chairs", icon: "▦" },
   { label: "Saved", href: "/favorites", icon: "★" },
-  { label: "Prefs", href: "/settings", icon: "⚙" },
+  { label: "Profile", href: "/profile", icon: "👤" },
 ];
 
 type MobileShellProps = {
