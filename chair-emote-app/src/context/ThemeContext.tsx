@@ -12,12 +12,11 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light");
-
-  useEffect(() => {
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window === "undefined") return "light";
     const saved = localStorage.getItem("theme") as Theme | null;
-    if (saved) setTheme(saved);
-  }, []);
+    return saved ?? "light";
+  });
 
   useEffect(() => {
     const root = document.documentElement;
