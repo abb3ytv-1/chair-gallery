@@ -18,3 +18,9 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}

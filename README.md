@@ -1,3 +1,6 @@
+ctl + k
+v
+
 # COUNCIL
 ## **CHAIR**
 
@@ -11,7 +14,7 @@
 - council chair
 - ryan chair (throne)
 - rainbow chair
-- tiempo chair (include fennec fox somewhere)
+- tiempo chair (include fennec fox somewhere) - **<ins> Concept Made <ins>**
 - cait chair (axolotl on it like he’s just in a bucket on the chair)
 - kayla chair (red panda)
 - Chloe chair (:minhozoo:)
