@@ -14,3 +14,16 @@
 - tiempo chair (include fennec fox somewhere)
 - cait chair (axolotl on it like he’s just in a bucket on the chair)
 - kayla chair (red panda)
+- Chloe chair (:minhozoo:)
+- benny chair
+- daisy chair
+- rae chair
+- poss chair (otter)
+- sweater chair with a blanket 
+- luis chair (racoon)
+- robo chair (anti moo)
+- sin sin chair
+- sina chair
+- ame chair (penquin)
+- aurora chair (trans)
+- ains chair (lesbian)
