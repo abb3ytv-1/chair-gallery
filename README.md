@@ -26,12 +26,12 @@ into something that actually functions like a real product.
 
 ## Running Locally
 
-\`\`\` bash
+``` bash
 git clone https://github.com/abb3ytv-1/chair-gallery.git
 cd chair-gallery/chair-emote-app
 npm install
 npm run dev
-\`\`\`
+```
 
 Then open [http://localhost:3000](http://localhost:3000).
 
