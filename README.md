@@ -35,14 +35,12 @@ Then open [http://localhost:3000](http://localhost:3000).
 
 ## Screenshots
 
-| Home | Archive | Chair Detail |
-|------|---------|--------------|
-| ![Home](./docs/home.png) | ![Archive](./docs/archive.png) | ![Detail](./docs/detail.png) |
+*Coming soon — custom chair art in progress* 🎨
 
 ## About
 
 Built by [Abbey Kelley](https://github.com/abb3ytv-1) for The Council community on 
-[Twitch](https://twitch.tv/abb3ymarie).
+[Twitch](https://twitch.tv/fgmoo).
 
 ---
 
