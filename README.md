@@ -19,12 +19,14 @@ into something that actually functions like a real product.
 
 ## Tech Stack
 
-- **Framework**: Next.js / React
-- **Styling**: [fill in — Tailwind? CSS Modules?]
+- **Framework**: Next.js
+- **Library**: React
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
 
 ## Running Locally
 
-\`\`\`bash
+\`\`\` bash
 git clone https://github.com/abb3ytv-1/chair-gallery.git
 cd chair-gallery/chair-emote-app
 npm install
